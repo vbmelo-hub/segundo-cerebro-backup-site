@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de privacidade da integração pessoal local Segundo Cérebro n8n com Google Calendar e Google Drive.">
+  <title>Política de Privacidade | Segundo Cérebro n8n</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 760px;
+      margin: 60px auto;
+      padding: 0 24px;
+      line-height: 1.7;
+      background: #f6f8fa;
+      color: #202b35;
+    }
+    main {
+      background: white;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid #dce3e8;
+    }
+    h1, h2 { color: #164a60; }
+    a { color: #126b82; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav aria-label="Navegação do aplicativo">
+      <p><a href="n8n.html">← Voltar ao Segundo Cérebro n8n</a></p>
+    </nav>
+
+    <h1>Política de Privacidade — Segundo Cérebro n8n</h1>
+    <p>Última atualização: <time datetime="2026-10-26">26 de outubro de 2026</time>.</p>
+
+    <h2>1. Sobre a integração</h2>
+    <p>
+      O Segundo Cérebro n8n é uma automação pessoal executada em uma
+      instalação local do n8n, vinculada ao projeto Google Cloud
+      Segundo-Cerebro-n8n. Sua finalidade é consultar a agenda pessoal
+      do Google Calendar e gravar um resumo diário privado em TXT
+      no Meu Drive do titular.
+    </p>
+    <p>
+      Esta política trata dessa integração de agenda. O resumo é texto
+      simples, sem criptografia adicional pela automação; não é um
+      backup criptografado do cofre Obsidian.
+    </p>
+
+    <h2>2. Autorização e dados acessados</h2>
+    <p>
+      O acesso é autorizado pelo titular da conta por OAuth do Google,
+      usando as credenciais configuradas no n8n. As permissões concedidas
+      podem ser consultadas na Conta Google; o fluxo utiliza os dados
+      para as operações descritas nesta política.
+    </p>
+    <ul>
+      <li><strong>Google Calendar:</strong> títulos, datas e horários de início
+        e término, além de identificadores, status e informações de recorrência
+        necessários para organizar os eventos das próximas 24 horas.</li>
+      <li><strong>Google Drive:</strong> conteúdo dos resumos e metadados como
+        nome, ID, tipo, pasta, propriedade, estado de compartilhamento e
+        marcadores do aplicativo usados para identificar o arquivo diário.</li>
+    </ul>
+    <p>
+      Descrições, listas de convidados, endereços e anexos dos eventos
+      não são solicitados pelo fluxo nem incluídos no resumo.
+      A automação não cria, altera ou exclui compromissos.
+    </p>
+
+    <h2>3. Finalidade e uso limitado</h2>
+    <p>
+      Os dados são utilizados para gerar um resumo cronológico com datas,
+      horários e títulos, respeitando o fuso America/Rio_Branco, e para
+      criar ou atualizar o resumo identificado da mesma data no Drive.
+      Dias sem compromissos são indicados no texto.
+    </p>
+    <p>
+      Os dados não são vendidos nem utilizados para publicidade.
+      Seu uso e transferência ficam limitados às funcionalidades aqui
+      descritas, em conformidade com a
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>,
+      incluindo os requisitos de uso limitado.
+    </p>
+
+    <h2>4. Armazenamento e segurança</h2>
+    <p>
+      O processamento ocorre no computador do usuário. As credenciais OAuth
+      ficam no armazenamento local de credenciais do n8n e não são publicadas
+      neste site ou no repositório.
+    </p>
+    <p>
+      Resultados dos nós, dados dos eventos e textos dos resumos podem
+      permanecer no histórico de execução e no armazenamento persistente
+      local do n8n, conforme as configurações de retenção do proprietário.
+      O acesso ao computador e à instalação deve ser protegido pelo titular.
+    </p>
+    <p>
+      Os resumos são armazenados como arquivos TXT em texto simples no
+      Google Drive pessoal, sujeitos às medidas de segurança e às políticas
+      do próprio Google. O acesso autorizado à conta ou ao arquivo permite
+      ler seu conteúdo.
+    </p>
+
+    <h2>5. Compartilhamento</h2>
+    <p>
+      A transferência necessária ao funcionamento ocorre entre a instalação
+      local do n8n e os serviços Google Calendar e Google Drive.
+      A automação não cria compartilhamentos, não torna os resumos públicos
+      e não envia seus conteúdos ao GitHub Pages.
+    </p>
+
+    <h2>6. Retenção e exclusão</h2>
+    <p>
+      Os resumos permanecem no Drive até sua exclusão pelo titular.
+      Uma nova execução na mesma data atualiza o arquivo identificado
+      daquela data. O histórico de execução local segue as configurações
+      de retenção do n8n; não há um prazo único definido por esta política.
+    </p>
+    <p>
+      O titular pode excluir os resumos no Drive e remover o histórico,
+      os dados de execução e as credenciais na sua instalação local.
+      Revogar o acesso do Google, por si só, não apaga os arquivos
+      e os dados já armazenados.
+    </p>
+
+    <h2>7. Revogação de acesso</h2>
+    <p>
+      O titular pode interromper a automação no n8n e revogar o acesso em
+      <a href="https://myaccount.google.com/connections">Conexões de terceiros da Conta Google</a>:
+      selecione a integração, confira os detalhes e remova seu acesso.
+      Isso impede novas consultas e gravações autorizadas por essa conexão,
+      sem apagar os resumos existentes.
+      Consulte também as
+      <a href="https://support.google.com/accounts/answer/13533235?hl=pt-BR">instruções oficiais do Google para gerenciar acessos</a>.
+    </p>
+
+    <h2>8. Este site</h2>
+    <p>
+      Estas páginas são informativas, hospedadas no GitHub Pages.
+      Não contêm formulários, scripts de rastreamento ou processamento
+      de dados da agenda. A hospedagem está sujeita à
+      <a href="https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement">Política de Privacidade do GitHub</a>.
+    </p>
+
+    <h2>9. Contato e alterações</h2>
+    <p>
+      Responsável pelo projeto: <a href="https://github.com/vbmelo-hub">vbmelo-hub</a>.
+      Para dúvidas gerais sobre a integração ou esta política, use o
+      <a href="https://github.com/vbmelo-hub/segundo-cerebro-backup-site/issues">canal de contato do repositório no GitHub</a>.
+      Esse canal é público: não envie dados da agenda, credenciais,
+      tokens ou informações pessoais.
+    </p>
+    <p>
+      Mudanças relevantes no tratamento dos dados serão refletidas
+      nesta política, com atualização da data indicada acima.
+    </p>
+  </main>
+</body>
+</html>

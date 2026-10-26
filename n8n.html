@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Automação pessoal local que consulta a agenda do Google Calendar e salva um resumo diário privado em TXT no Google Drive.">
+  <title>Segundo Cérebro n8n</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 760px;
+      margin: 60px auto;
+      padding: 0 24px;
+      line-height: 1.7;
+      background: #f6f8fa;
+      color: #202b35;
+    }
+    main {
+      background: white;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid #dce3e8;
+    }
+    h1, h2 { color: #164a60; }
+    a { color: #126b82; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Segundo Cérebro n8n</h1>
+
+    <p>
+      O Segundo Cérebro n8n é uma automação pessoal executada localmente
+      no computador do usuário. A integração usa Google Calendar e Google Drive,
+      mediante autorização OAuth do titular da conta, para preparar um resumo
+      diário da agenda pessoal.
+    </p>
+
+    <h2>Como funciona</h2>
+    <ol>
+      <li>Consulta os compromissos das próximas 24 horas no Google Calendar.</li>
+      <li>Organiza datas, horários e títulos em ordem cronológica, no fuso
+        America/Rio_Branco, incluindo eventos recorrentes e de dia inteiro.</li>
+      <li>Salva o resumo em um arquivo TXT privado no Meu Drive pessoal.
+        Quando já existe um resumo identificado da mesma data, atualiza
+        esse arquivo para evitar duplicação.</li>
+    </ol>
+    <p>
+      Se não houver compromissos, o resumo informa essa ausência.
+      A execução pode ser manual ou programada pelo proprietário na sua
+      instalação local do n8n; a programação depende de ativação por ele.
+    </p>
+
+    <h2>Dados utilizados</h2>
+    <p>
+      O resumo contém apenas datas, horários e títulos dos compromissos.
+      Descrições, convidados, endereços e outros detalhes sensíveis não
+      são incluídos. A automação consulta os eventos sem modificá-los
+      e não adiciona convidados.
+    </p>
+    <p>
+      No Drive, a integração consulta metadados para reconhecer seus próprios
+      resumos e criar ou atualizar o arquivo diário. Não cria permissões
+      de compartilhamento nem publica esses arquivos.
+    </p>
+
+    <h2>Armazenamento e privacidade</h2>
+    <p>
+      O resumo é um arquivo de texto simples, sem criptografia adicional
+      realizada por esta automação. Os dados também podem permanecer no
+      histórico local de execução do n8n, conforme sua configuração.
+      Esta integração é distinta do aplicativo de backup criptografado
+      do Obsidian apresentado na página principal deste site.
+    </p>
+    <p>
+      Este site é apenas informativo: não executa a automação,
+      não recebe dados da agenda e não armazena credenciais.
+    </p>
+
+    <nav aria-label="Privacidade do aplicativo">
+      <p><a href="n8n-privacy.html">Política de Privacidade do Segundo Cérebro n8n</a></p>
+    </nav>
+
+    <h2>Contato</h2>
+    <p>
+      Responsável pelo projeto: <a href="https://github.com/vbmelo-hub">vbmelo-hub</a>.
+      Dúvidas gerais podem ser encaminhadas pelo
+      <a href="https://github.com/vbmelo-hub/segundo-cerebro-backup-site/issues">canal de contato do repositório no GitHub</a>.
+      Como esse canal é público, não envie dados da agenda, credenciais
+      ou outras informações pessoais.
+    </p>
+  </main>
+</body>
+</html>
